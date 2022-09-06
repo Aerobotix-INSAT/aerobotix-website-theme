@@ -1,0 +1,16 @@
+{
+  "name": "aerobotix-website-theme",
+  "version": "1.0.0",
+  "description": "the wordpress theme for the Aerobotix website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mahdi Chaari",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "tailwind": "^4.0.0"
+  }
+}
