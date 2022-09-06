@@ -1,1 +1,1 @@
-<h1> Custom Theme! </h1>
+<h1> Custom hello world Theme! </h1>
