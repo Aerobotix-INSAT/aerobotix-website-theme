@@ -14,7 +14,4 @@
 <?php get_footer(); 
 
 
-
-
-
 ?>
