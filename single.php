@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="prose">
+<div class="prose prose-invert">
     <h1>single page</h1>
     <p>work in progress</p>
 </div>

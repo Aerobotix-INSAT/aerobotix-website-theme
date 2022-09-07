@@ -15,7 +15,7 @@
     ?>
 </head>
 
-<body>
+<body class="bg-background">
     <?php is_home() || is_page() || is_category()
         ? get_template_part("template-parts/header/header-page")
         : get_template_part("template-parts/header/header-post"); ?>

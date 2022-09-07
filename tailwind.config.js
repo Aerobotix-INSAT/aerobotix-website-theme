@@ -11,7 +11,14 @@ module.exports = {
     fontFamily: {
       sans: ["Montserrat", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      colors: {
+        background: "#222222",
+        primary: "#E91921",
+        secondary: "#0967AA",
+      }
+
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 };
