@@ -8,8 +8,12 @@ module.exports = {
     "./scripts/*.js",
   ],
   theme: {
+    fontFamily: {
+      sans:['Montserrat', 'sans-serif']
+    },
     extend: {},
   },
   plugins: [
+    require('@tailwindcss/typography'),
   ],
 }

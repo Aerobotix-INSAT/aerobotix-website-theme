@@ -3,28 +3,39 @@
   "version": "1.0.0",
   "description": "the wordpress theme for the Aerobotix website",
   "main": "index.js",
-  "nodemonConfig":{
-    "restartable":"rs",
+  "nodemonConfig": {
+    "restartable": "rs",
     "verbose": true,
-    "watch":["**/*.*","./*.*"],
-    "ignore": [ "style.css","*.json","node_modules","*.config.js",".md",".gitignore",".git"],
+    "watch": [
+      "**/*.*",
+      "./*.*"
+    ],
+    "ignore": [
+      "style.css",
+      "node_modules",
+      ".md",
+      ".gitignore",
+      ".git"
+    ],
     "exec": "npm run postcss"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tailwind": "npx tailwindcss -i ./styles/input.css -o ./intermediate/style.css --watch",
     "postcss": "postcss ./styles/input.css -o ./style.css ",
-    "start":"nodemon"
+    "start": "nodemon"
   },
   "author": "Mahdi Chaari",
   "license": "ISC",
   "devDependencies": {
+    "@prettier/plugin-php": "^0.18.9",
+    "@tailwindcss/typography": "^0.5.7",
     "autoprefixer": "^10.4.8",
+    "husky": "^8.0.1",
     "nodemon": "^2.0.19",
     "postcss": "^8.4.16",
     "postcss-cli": "^10.0.0",
+    "prettier": "^2.7.1",
     "tailwind": "^4.0.0",
     "tailwindcss": "^3.1.8"
   }
-  
 }
