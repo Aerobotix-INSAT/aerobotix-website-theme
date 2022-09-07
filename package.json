@@ -22,7 +22,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postcss": "postcss ./styles/input.css -o ./style.css ",
-    "start": "nodemon"
+    "start": "nodemon",
+    "prepare": "husky install"
   },
   "author": "Mahdi Chaari",
   "license": "ISC",
@@ -30,7 +31,7 @@
     "@prettier/plugin-php": "^0.18.9",
     "@tailwindcss/typography": "^0.5.7",
     "autoprefixer": "^10.4.8",
-    "husky": "^8.0.1",
+    "husky": "^8.0.0",
     "nodemon": "^2.0.19",
     "postcss": "^8.4.16",
     "postcss-cli": "^10.0.0",
