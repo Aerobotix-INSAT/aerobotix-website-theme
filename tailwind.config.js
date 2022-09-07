@@ -9,11 +9,9 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans:['Montserrat', 'sans-serif']
+      sans: ["Montserrat", "sans-serif"],
     },
     extend: {},
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
-}
+  plugins: [require("@tailwindcss/typography")],
+};

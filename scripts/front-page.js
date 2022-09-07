@@ -1,1 +1,1 @@
-console.log('front-page.js loaded');
+console.log("front-page.js loaded");
