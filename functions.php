@@ -1,5 +1,5 @@
 <?php
-if (!function_exists("aerobotix_theme_setup")):
+if (!function_exists("aerobotix_theme_setup")) :
     /**
      * Sets up theme defaults and registers support for various WordPress features.
      *
@@ -31,7 +31,7 @@ if (!function_exists("aerobotix_theme_setup")):
 endif; // aerobotix_theme_setup
 add_action("after_setup_theme", "aerobotix_theme_setup");
 
-if (!function_exists("aerobotix_theme_enqueue_scripts")):
+if (!function_exists("aerobotix_theme_enqueue_scripts")) :
     /**
      * Enqueue scripts and styles.
      */
@@ -42,29 +42,22 @@ if (!function_exists("aerobotix_theme_enqueue_scripts")):
             "style",
             get_stylesheet_uri(),
             [],
-            wp_get_theme()->get("Version")
+            null
         );
-        // Enqueue Font Awesome.
-        wp_enqueue_style(
-            "font-awesome",
-            "https://use.fontawesome.com/releases/v5.8.1/css/all.css",
-            [],
-            "5.8.1"
-        );
+
         // Conditionally Enqueue the main JS file.
         if (is_front_page()) {
             wp_enqueue_script(
                 "front",
                 get_template_directory_uri() . "/scripts/front-page.js",
                 "1.0.0",
-                false
+                true
             );
         } else {
             wp_enqueue_script(
                 "main",
                 get_template_directory_uri() . "/scripts/main.js",
-                "1.0.0",
-                true
+                array(),false,true,
             );
         }
     }

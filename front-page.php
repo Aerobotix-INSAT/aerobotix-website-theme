@@ -9,7 +9,7 @@
 <body>
     
     <!-- here goes the code for the front page of the site -->
-
+    
     
     <?php wp_footer(); ?>
 </body>
