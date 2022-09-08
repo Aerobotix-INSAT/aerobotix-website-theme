@@ -1,0 +1,38 @@
+404
+author
+category
+front-page
+home
+tag
+date
+
+
+
+
+single.php
+page.php
+404.php
+search.php
+
+
+
+Unique headers:
+single : post attachment
+author;
+page;
+
+
+
+generic header:
+date: year, month, day
+archive : date taf category tag
+search
+home
+404
+
+
+
+
+totally custom page:
+front-page
+contact

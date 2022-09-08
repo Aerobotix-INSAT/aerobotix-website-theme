@@ -1018,8 +1018,20 @@ video {
   height: -moz-fit-content;
   height: fit-content;
 }
+.h-\[50vh\] {
+  height: 50vh;
+}
+.h-1\/2 {
+  height: 50%;
+}
 .w-screen {
   width: 100vw;
+}
+.w-full {
+  width: 100%;
+}
+.w-1\/2 {
+  width: 50%;
 }
 .w-max {
   width: -webkit-max-content;
@@ -1032,11 +1044,23 @@ video {
 .flex-row {
   flex-direction: row;
 }
+.flex-col {
+  flex-direction: column;
+}
 .items-center {
   align-items: center;
 }
+.justify-center {
+  justify-content: center;
+}
 .justify-between {
   justify-content: space-between;
+}
+.gap-2 {
+  gap: 0.5rem;
+}
+.gap-3 {
+  gap: 0.75rem;
 }
 .overflow-hidden {
   overflow: hidden;
@@ -1060,19 +1084,43 @@ video {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.pt-20 {
+  padding-top: 5rem;
+}
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+.text-center {
+  text-align: center;
 }
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 .font-bold {
   font-weight: 700;
 }
 .font-medium {
   font-weight: 500;
+}
+.font-black {
+  font-weight: 900;
 }
 .uppercase {
   text-transform: uppercase;
@@ -1111,8 +1159,7 @@ html {
   border-color: rgba(240, 248, 255, 0.247);
 }
 
-
- /* navbar styles */
+/* navbar styles */
 .navbar {
   z-index: 10;
   display: flex;
@@ -1177,19 +1224,47 @@ html {
 }
 
 
-
 .menu-item {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 400;
+  /* add animation for hover */
 }
+
 .current-menu-item {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
 }
+
+@media (min-width: 640px) {
+  .sm\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  .sm\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .lg\:flex {
     display: flex;
+  }
+  .lg\:px-56 {
+    padding-left: 14rem;
+    padding-right: 14rem;
   }
 }

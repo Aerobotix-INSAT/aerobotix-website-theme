@@ -27,39 +27,38 @@ html {
   border-color: rgba(240, 248, 255, 0.247);
 }
 
-
- /* navbar styles */
-.navbar{
+/* navbar styles */
+.navbar {
   @apply flex justify-between w-screen h-fit px-8 py-4 items-center z-10;
 }
 
-.nav-menu{
-  @apply hidden md:flex justify-between w-fit gap-6 items-center
+.nav-menu {
+  @apply hidden md:flex justify-between w-fit gap-6 items-center;
 }
-.nav-icon{
-  @apply text-3xl  static md:hidden
+.nav-icon {
+  @apply text-3xl  static md:hidden;
 }
-.navbar-active{
+.navbar-active {
   @apply flex-col fixed justify-center gap-11 w-screen h-screen py-7;
   background-color: #222222;
 }
-.navbar-active .nav-menu{
-  @apply flex flex-col gap-5 
+.navbar-active .nav-menu {
+  @apply flex flex-col gap-5;
 }
-.navbar-active .open{
-  @apply hidden
+.navbar-active .open {
+  @apply hidden;
 }
-.navbar-active .close{
-  @apply block
+.navbar-active .close {
+  @apply block;
 }
 
 
-
-.menu-item{
-  @apply font-normal text-2xl
+.menu-item {
+  @apply font-normal text-2xl ;
   /* add animation for hover */
 }
-.current-menu-item{
+
+.current-menu-item {
   @apply font-bold text-2xl
-  /* add special style for current page */
+  /* add special style for current page */;
 }

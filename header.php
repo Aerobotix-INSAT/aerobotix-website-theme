@@ -19,23 +19,9 @@
     <header class="bg-cover h-fit w-screen overflow-hidden relative" style="
             background-image: linear-gradient(0deg, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 100%),url('<?php echo get_template_directory_uri() . "/assets/images/red-gradient.jpg"; ?> ') ;  
             background-position:center ;">
-        <nav class="navbar">
-            <div><span class="font-bold text-3xl">Aerobotix </span><span class="text-3xl font-medium"> | Blog</span></div>
-            <div class="nav-menu">
-                <?php wp_nav_menu([
-                    "theme_location" => "Blog",
-                    "menu_class" => "nav-menu",
-                    "container" => false,
-                ]); ?>
 
-            </div>
-            <div class="nav-icon"><i class="fa-solid fa-bars open"></i><i class="hidden fa-solid fa-x close"></i></div>
-            <div class="glass text-2xl hidden lg:flex flex-row justify-between px-3 w-max rounded-md items-center" onclick=""><a href="<?php echo home_url() ?>">About Aerobotix<i class="fa-solid fa-angles-right"></i></a></div>
+        <?php get_template_part("template-parts/navbar/navbar"); ?>
 
-        </nav>
-
-        <?php is_home() || is_page() || is_category()
-            ? get_template_part("template-parts/title/title-page")
-            : get_template_part("template-parts/title/title-post"); ?>
+        <?php get_template_part("template-parts/title/title") ?>
 
     </header>
