@@ -1,11 +1,11 @@
-<?php get_header(); ?>
+<?php get_header(); 
 
-<?php get_template_part("template-parts/featured/featured"); ?>
-
-
+get_template_part("template-parts/featured/featured"); 
 
 
+get_template_part("template-parts/loop/loop"); 
 
 
 
-<?php get_footer(); ?>
+
+get_footer(); ?>

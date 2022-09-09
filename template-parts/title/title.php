@@ -1,5 +1,5 @@
-<div id="title" class="text-center flex flex-col justify-center px-6 sm:px-24 lg:px-56 pt-20 pb-2 gap-3 items-center">
-    <h1 class="font-black text-5xl sm:text-6xl md:text-7xl"><?php
+<div id="title" class="w-screen text-center flex flex-col justify-center px-6 sm:px-24 lg:px-56 pt-20 pb-2 gap-3 items-center ">
+    <h1 class="font-black text-5xl sm:text-6xl md:text-7xl break-all"><?php
                     if (is_home()) echo "Aerobotix Blog";
                     else if (is_category()) echo "Category: " . single_cat_title("", false);
                     else if (is_tag()) echo "#" . str_replace(' ', '_', single_tag_title("", false));
