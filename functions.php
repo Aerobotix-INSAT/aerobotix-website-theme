@@ -1,4 +1,5 @@
 <?php
+
 if (!function_exists("aerobotix_theme_setup")) :
     /**
      * Sets up theme defaults and registers support for various WordPress features.
@@ -42,7 +43,7 @@ if (!function_exists("aerobotix_theme_enqueue_scripts")) :
             "style",
             get_stylesheet_uri(),
             [],
-            null
+            strval(time()) // TODO : Change this to a version number for production
         );
 
         // Conditionally Enqueue the main JS file.

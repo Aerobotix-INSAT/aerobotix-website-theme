@@ -17,6 +17,7 @@ module.exports = {
         background: "#222222",
         primary: "#E91921",
         secondary: "#0967AA",
+        glass: "#FDFAFA80"
       },
       backgroundImage: {
         pattern: "url('assets/images/red-gradient.jpg')",

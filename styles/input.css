@@ -2,7 +2,6 @@
 Theme Name: aerobotix-theme
 Author: Mahdi Chaari
 Author URI: https://github.com/mahdichaari01
-Version: 1.0
  */
 @tailwind base;
 @tailwind components;
@@ -37,6 +36,9 @@ html {
 }
 .nav-icon {
   @apply text-3xl  static md:hidden;
+}
+.nav-icon:hover{
+  @apply cursor-pointer;
 }
 .navbar-active {
   @apply flex-col fixed justify-center gap-11 w-screen h-screen py-7;
