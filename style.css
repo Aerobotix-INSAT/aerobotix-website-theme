@@ -1006,8 +1006,15 @@ video {
 .m-auto {
   margin: auto;
 }
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
 .mb-\[7px\] {
   margin-bottom: 7px;
+}
+.mb-16 {
+  margin-bottom: 4rem;
 }
 .mb-20 {
   margin-bottom: 5rem;
@@ -1076,6 +1083,12 @@ video {
   width: -moz-max-content;
   width: max-content;
 }
+.max-w-\[34rem\] {
+  max-width: 34rem;
+}
+.max-w-3xl {
+  max-width: 48rem;
+}
 .max-w-full {
   max-width: 100%;
 }
@@ -1101,6 +1114,9 @@ video {
 }
 .auto-rows-auto {
   grid-auto-rows: auto;
+}
+.grid-cols-\[repeat\(auto-fit\2c 10rem\)\] {
+  grid-template-columns: repeat(auto-fit,10rem);
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -1132,8 +1148,8 @@ video {
 .gap-5 {
   gap: 1.25rem;
 }
-.gap-12 {
-  gap: 3rem;
+.gap-4 {
+  gap: 1rem;
 }
 .gap-3 {
   gap: 0.75rem;
@@ -1310,6 +1326,9 @@ video {
 .opacity-70 {
   opacity: 0.7;
 }
+.mix-blend-overlay {
+  mix-blend-mode: overlay;
+}
 .outline-glass {
   outline-color: #FDFAFA80;
 }
@@ -1474,16 +1493,12 @@ html {
   flex-direction: column;
   align-items: center;
 }
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   .footer-nav-menu {
     align-items: flex-start;
   }
-  .sm\:flex-row {
-    flex-direction: row;
-  }
-  .sm\:items-start {
-    align-items: flex-start;
-  }
+}
+@media (min-width: 640px) {
   .sm\:px-14 {
     padding-left: 3.5rem;
     padding-right: 3.5rem;
@@ -1491,9 +1506,6 @@ html {
   .sm\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;
-  }
-  .sm\:text-start {
-    text-align: start;
   }
   .sm\:text-6xl {
     font-size: 3.75rem;
@@ -1548,20 +1560,15 @@ html {
   .lg\:h-36 {
     height: 9rem;
   }
-  .lg\:w-fit {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
   .lg\:flex-row {
     flex-direction: row;
-  }
-  .lg\:justify-start {
-    justify-content: flex-start;
   }
   .lg\:px-56 {
     padding-left: 14rem;
     padding-right: 14rem;
+  }
+  .lg\:text-start {
+    text-align: start;
   }
   .lg\:text-3xl {
     font-size: 1.875rem;

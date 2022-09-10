@@ -95,5 +95,5 @@ html {
 
 }
 .footer-nav-menu{
-  @apply flex flex-col items-center sm:items-start;
+  @apply flex flex-col items-center lg:items-start ;
 }
