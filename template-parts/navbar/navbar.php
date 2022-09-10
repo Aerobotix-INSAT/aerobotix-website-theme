@@ -1,5 +1,5 @@
 <nav class="navbar">
-    <a href="<?php echo get_home_url() ?>" class="block"><span class="font-bold text-3xl">Aerobotix </span><span class="text-3xl font-medium"> | Blog</span></a>
+    <div><a class="menu-item" href="<?php echo get_home_url() ?>"><span class="font-bold text-3xl">Aerobotix </span></a><span class="text-3xl font-medium select-none"> | Blog</span></div>
     <div class="nav-menu">
         <?php wp_nav_menu([
             "theme_location" => "Blog",
