@@ -14,10 +14,14 @@
     wp_head();
     ?>
 </head>
-
+<?php
+$default=get_template_directory_uri() . "/assets/images/red-gradient.jpg";
+$post_thumbnail = get_the_post_thumbnail_url(get_queried_object(), '') ;
+$thumbnail= $post_thumbnail? $post_thumbnail : $default;
+?>
 <body class="bg-background">
     <header class="bg-cover h-fit w-screen overflow-hidden relative" style="
-            background-image: linear-gradient(0deg, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 100%),url('<?php echo get_template_directory_uri() . "/assets/images/red-gradient.jpg"; ?> ') ;  
+            background-image: linear-gradient(0deg, rgba(34,34,34,1) 0%, rgba(34,34,34,0.25) 100%),url('<?php echo $thumbnail ?> ') ;  
             background-position:center ;">
 
         <?php get_template_part("template-parts/navbar/navbar"); ?>
