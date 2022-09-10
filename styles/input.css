@@ -24,16 +24,15 @@ html {
 .glass:focus {
   outline: 2px solid;
   outline-color: rgba(240, 248, 255, 0.568);
-  filter:brightness(1.25);
+  filter: brightness(1.25);
 }
-.glass:hover img{
+.glass:hover img {
   filter: brightness(0.8);
 }
 
 /* navbar styles */
 .navbar {
   @apply flex justify-between w-full h-fit px-8 py-4 items-center z-10;
-  
 }
 
 .nav-menu {
@@ -42,7 +41,7 @@ html {
 .nav-icon {
   @apply text-3xl  static md:hidden;
 }
-.nav-icon:hover{
+.nav-icon:hover {
   @apply cursor-pointer;
 }
 .navbar-active {
@@ -59,9 +58,8 @@ html {
   @apply block;
 }
 
-
 .menu-item {
-  @apply font-normal text-2xl ;
+  @apply font-normal text-2xl;
   /* add animation for hover */
 }
 
@@ -76,7 +74,7 @@ html {
 }
 
 .menu-item:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -92,6 +90,10 @@ html {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-.footer-nav-menu .menu-item{
-  @apply block w-fit;
+.footer-nav-menu .menu-item {
+  @apply block w-fit text-xl;
+
+}
+.footer-nav-menu{
+  @apply flex flex-col items-center sm:items-start;
 }

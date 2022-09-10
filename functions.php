@@ -1,6 +1,6 @@
 <?php
 
-if (!function_exists("aerobotix_theme_setup")) :
+if (!function_exists("aerobotix_theme_setup")):
     /**
      * Sets up theme defaults and registers support for various WordPress features.
      *
@@ -32,7 +32,7 @@ if (!function_exists("aerobotix_theme_setup")) :
 endif; // aerobotix_theme_setup
 add_action("after_setup_theme", "aerobotix_theme_setup");
 
-if (!function_exists("aerobotix_theme_enqueue_scripts")) :
+if (!function_exists("aerobotix_theme_enqueue_scripts")):
     /**
      * Enqueue scripts and styles.
      */
@@ -58,11 +58,11 @@ if (!function_exists("aerobotix_theme_enqueue_scripts")) :
             wp_enqueue_script(
                 "main",
                 get_template_directory_uri() . "/scripts/main.js",
-                array(),false,true,
+                [],
+                false,
+                true
             );
         }
     }
 endif; // aerobotix_theme_enqueue_scripts
 add_action("wp_enqueue_scripts", "aerobotix_theme_enqueue_scripts");
-
-
