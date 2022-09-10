@@ -22,13 +22,18 @@ html {
 .glass:hover,
 .glass:active,
 .glass:focus {
-  outline: 1px solid;
-  outline-color: rgba(240, 248, 255, 0.247);
+  outline: 2px solid;
+  outline-color: rgba(240, 248, 255, 0.568);
+  filter:brightness(1.25);
+}
+.glass:hover img{
+  filter: brightness(0.8);
 }
 
 /* navbar styles */
 .navbar {
   @apply flex justify-between w-screen h-fit px-8 py-4 items-center z-10;
+  
 }
 
 .nav-menu {

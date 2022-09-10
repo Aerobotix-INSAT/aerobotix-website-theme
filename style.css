@@ -1029,23 +1029,23 @@ video {
 .h-\[50vh\] {
   height: 50vh;
 }
-.h-\[390px\] {
-  height: 390px;
-}
-.h-20 {
-  height: 5rem;
+.h-full {
+  height: 100%;
 }
 .h-9 {
   height: 2.25rem;
 }
-.h-full {
-  height: 100%;
+.h-48 {
+  height: 12rem;
 }
 .w-screen {
   width: 100vw;
 }
 .w-full {
   width: 100%;
+}
+.w-auto {
+  width: auto;
 }
 .w-80 {
   width: 20rem;
@@ -1061,8 +1061,8 @@ video {
 .flex-none {
   flex: none;
 }
-.basis-20 {
-  flex-basis: 5rem;
+.basis-\[5\.7rem\] {
+  flex-basis: 5.7rem;
 }
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1266,8 +1266,12 @@ html {
 .glass:hover,
 .glass:active,
 .glass:focus {
-  outline: 1px solid;
-  outline-color: rgba(240, 248, 255, 0.247);
+  outline: 2px solid;
+  outline-color: rgba(240, 248, 255, 0.568);
+  filter:brightness(1.25);
+}
+.glass:hover img{
+  filter: brightness(0.8);
 }
 
 /* navbar styles */
