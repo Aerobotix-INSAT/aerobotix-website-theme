@@ -2,9 +2,9 @@
 
 get_template_part("template-parts/featured/featured"); 
 
-
+echo "<main>";
 get_template_part("template-parts/loop/home_loop"); 
-
+echo "</main>";
 
 
 

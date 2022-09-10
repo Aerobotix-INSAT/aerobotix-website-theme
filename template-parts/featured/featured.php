@@ -1,5 +1,3 @@
-
-
 <?php
 $query = new WP_Query(array('meta_key' => '_is_ns_featured_post', 'meta_value' => 'yes'));
 if ($query->have_posts()) {
@@ -19,7 +17,7 @@ $avatar = get_avatar($post->post_author, 60, '', '', ['class' => "h-auto max-w-f
 $has_post_thumbnail = has_post_thumbnail($post_id);
 $excerpt = get_the_excerpt($post_id);
 ?>
-<div class="flex flex-col md:flex-row w-screen px-9 sm:px-14 h-fit py-9 my-20 items-center gap-3 md:pl-0 md:pr-4" style="background-image: url(<?php echo  get_template_directory_uri().'/assets/images/featured_bg.png' ?>); background-size: cover; ">
+<section id="featured" class="flex flex-col md:flex-row w-screen px-9 sm:px-14 h-fit py-9 my-20 items-center gap-3 md:pl-0 md:pr-4" style="background-image: url(<?php echo  get_template_directory_uri() . '/assets/images/featured_bg.png' ?>); background-size: cover; ">
     <div class="w-full h-auto max-w-lg md:h-full md:w-auto md:max-w-[45vw]">
         <a href=<?php echo $permalink ?> class="block w-full h-full rounded-xl overflow-hidden md:rounded-l-none">
             <?php
@@ -38,7 +36,7 @@ $excerpt = get_the_excerpt($post_id);
             </div>
             <div class="flex flex-col justify-center items-start leading-none font-normal">
                 <a class="text-sm font-medium" href=<?php echo $author_link ?>><?php echo ucwords($author); ?></a>
-                <p class="text-xs text-[#C5C5C5]"><?php echo $date; ?></p>
+                <time class="text-xs text-[#C5C5C5]"><?php echo $date; ?></time>
             </div>
         </div>
         <div class="font-black text-2xl lg:text-3xl xl:text-4xl w-full leading-tight line-clamp-2 xl:line-clamp-3">
@@ -60,4 +58,4 @@ $excerpt = get_the_excerpt($post_id);
             ?>
         </div>
     </div>
-</div>
+</section>

@@ -16,7 +16,7 @@ $has_post_thumbnail = has_post_thumbnail($post_id);
 
 ?>
 
-<div class="glass h-fit w-80 rounded-3xl p-5 flex  flex-col items-center gap-5 overflow-hidden">
+<article class="glass h-fit w-80 rounded-3xl p-5 flex  flex-col items-center gap-5 overflow-hidden">
     <div class="font-bold text-2xl w-full leading-tight text-ellipsis basis-[5.7rem] flex-none line-clamp-3">
         <a href=<?php echo $permalink ?>><?php echo $title ?></a>
     </div>
@@ -26,10 +26,10 @@ $has_post_thumbnail = has_post_thumbnail($post_id);
         </div>
         <div class="flex flex-col justify-center items-start leading-none font-normal">
             <a class="text-sm font-medium" href=<?php echo $author_link ?>><?php echo ucwords($author); ?></a>
-            <p class="text-xs text-[#C5C5C5]"><?php echo $date; ?></p>
+            <time class="text-xs text-[#C5C5C5]"><?php echo $date; ?></time>
         </div>
     </div>
-    <div class="font-medium w-full text-sm leading-4 line-clamp-2 basis-[2rem] flex-none">
+    <div class="font-medium w-full text-sm leading-4 line-clamp-2 basis-[2.3rem] flex-none">
         <?php
         if ($tags) {
             echo 'Tags: ';
@@ -48,4 +48,4 @@ $has_post_thumbnail = has_post_thumbnail($post_id);
         }
         ?>
     </a>
-</div>
+</article>
