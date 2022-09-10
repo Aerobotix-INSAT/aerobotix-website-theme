@@ -1478,8 +1478,8 @@ html {
   .md\:max-w-none {
     max-width: none;
   }
-  .md\:grid-cols-\[repeat\(2\2c 20rem\)\] {
-    grid-template-columns: repeat(2,20rem);
+  .md\:grid-cols-\[repeat\(2\2c fit-content\(20rem\)\)\] {
+    grid-template-columns: repeat(2,fit-content(20rem));
   }
   .md\:flex-row {
     flex-direction: row;
@@ -1519,8 +1519,8 @@ html {
 }
 
 @media (min-width: 1280px) {
-  .xl\:grid-cols-\[repeat\(3\2c 20rem\)\] {
-    grid-template-columns: repeat(3,20rem);
+  .xl\:grid-cols-\[repeat\(3\2c fit-content\(20rem\)\)\] {
+    grid-template-columns: repeat(3,fit-content(20rem));
   }
   .xl\:text-4xl {
     font-size: 2.25rem;
@@ -1535,7 +1535,7 @@ html {
 }
 
 @media (min-width: 1536px) {
-  .\32xl\:grid-cols-\[repeat\(4\2c 20rem\)\] {
-    grid-template-columns: repeat(4,20rem);
+  .\32xl\:grid-cols-\[repeat\(4\2c fit-content\(20rem\)\)\] {
+    grid-template-columns: repeat(4,fit-content(20rem));
   }
 }
