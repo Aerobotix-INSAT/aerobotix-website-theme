@@ -9,14 +9,13 @@
         $args['category_name'] = $category->slug;
         $query = new WP_Query($args);
         if ($query->have_posts() && $category->slug != 'uncategorized') {
-            echo '<div class="flex flex-col justify-center items-center gap-5 mb-5">';
+            echo '<div class="flex flex-col justify-center items-center gap-5 mb-10">';
                 echo '<h1 class="font-bold text-2xl text-center">Latest ' . $category->name . '</h1>';
                     get_template_part("template-parts/loop/loop", null, array('query' => $query));
                 echo '</div>';
             echo '</div>';
         }
     }
-/*     $query = new WP_Query($args);
-    get_template_part("template-parts/loop/loop", null, array('query' => $query)); */
+
 
 ?>

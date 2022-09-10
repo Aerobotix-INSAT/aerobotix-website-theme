@@ -1006,12 +1006,11 @@ video {
 .m-auto {
   margin: auto;
 }
-.my-20 {
-  margin-top: 5rem;
+.mb-20 {
   margin-bottom: 5rem;
 }
-.mb-5 {
-  margin-bottom: 1.25rem;
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 .block {
   display: block;
@@ -1048,14 +1047,16 @@ video {
 .h-9 {
   height: 2.25rem;
 }
-.w-screen {
-  width: 100vw;
-}
-.w-auto {
-  width: auto;
+.w-fit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .w-full {
   width: 100%;
+}
+.w-auto {
+  width: auto;
 }
 .w-10 {
   width: 2.5rem;
@@ -1229,6 +1230,10 @@ video {
 .text-justify {
   text-align: justify;
 }
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -1236,10 +1241,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 .text-base {
   font-size: 1rem;
@@ -1256,6 +1257,9 @@ video {
   font-size: 3rem;
   line-height: 1;
 }
+.font-bold {
+  font-weight: 700;
+}
 .font-normal {
   font-weight: 400;
 }
@@ -1264,9 +1268,6 @@ video {
 }
 .font-black {
   font-weight: 900;
-}
-.font-bold {
-  font-weight: 700;
 }
 .uppercase {
   text-transform: uppercase;
@@ -1350,7 +1351,7 @@ html {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: 100vw;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
   padding-left: 2rem;
@@ -1390,7 +1391,7 @@ html {
 .navbar-active {
   position: fixed;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   gap: 2.75rem;
@@ -1418,7 +1419,7 @@ html {
   /* add animation for hover */
 }
 
-.current-menu-item {
+.navbar .current-menu-item {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
@@ -1446,7 +1447,12 @@ html {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-
+.footer-nav-menu .menu-item {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 @media (min-width: 640px) {
   .sm\:px-14 {
     padding-left: 3.5rem;
@@ -1461,7 +1467,6 @@ html {
     line-height: 1;
   }
 }
-
 @media (min-width: 768px) {
   .md\:h-full {
     height: 100%;
@@ -1503,7 +1508,6 @@ html {
     line-height: 1.5rem;
   }
 }
-
 @media (min-width: 1024px) {
   .lg\:flex {
     display: flex;
@@ -1517,7 +1521,6 @@ html {
     line-height: 2.25rem;
   }
 }
-
 @media (min-width: 1280px) {
   .xl\:grid-cols-\[repeat\(3\2c fit-content\(20rem\)\)\] {
     grid-template-columns: repeat(3,fit-content(20rem));
@@ -1533,7 +1536,6 @@ html {
     -webkit-line-clamp: 3;
   }
 }
-
 @media (min-width: 1536px) {
   .\32xl\:grid-cols-\[repeat\(4\2c fit-content\(20rem\)\)\] {
     grid-template-columns: repeat(4,fit-content(20rem));

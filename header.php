@@ -20,7 +20,7 @@ $post_thumbnail = get_the_post_thumbnail_url(get_queried_object(), '') ;
 $thumbnail= $post_thumbnail? $post_thumbnail : $default;
 ?>
 <body class="bg-background">
-    <header class="bg-cover h-fit w-screen overflow-hidden relative" style="
+    <header class="bg-cover h-fit w-full overflow-hidden relative mb-20" style="
             background-image: linear-gradient(0deg, rgba(34,34,34,1) 0%, rgba(34,34,34,0.25) 100%),url('<?php echo $thumbnail ?> ') ;  
             background-position:center ;">
 

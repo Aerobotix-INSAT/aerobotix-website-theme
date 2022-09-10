@@ -32,7 +32,7 @@ html {
 
 /* navbar styles */
 .navbar {
-  @apply flex justify-between w-screen h-fit px-8 py-4 items-center z-10;
+  @apply flex justify-between w-full h-fit px-8 py-4 items-center z-10;
   
 }
 
@@ -46,7 +46,7 @@ html {
   @apply cursor-pointer;
 }
 .navbar-active {
-  @apply flex-col fixed justify-center gap-11 w-screen h-screen py-7;
+  @apply flex-col fixed justify-center gap-11 w-full h-screen py-7;
   background-color: #222222;
 }
 .navbar-active .nav-menu {
@@ -65,7 +65,7 @@ html {
   /* add animation for hover */
 }
 
-.current-menu-item {
+.navbar .current-menu-item {
   @apply font-bold text-2xl
   /* add special style for current page */;
 }
@@ -91,4 +91,7 @@ html {
 .menu-item:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+.footer-nav-menu .menu-item{
+  @apply block w-fit;
 }
