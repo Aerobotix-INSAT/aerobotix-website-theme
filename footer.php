@@ -1,6 +1,6 @@
 <!-- here goes the footer code -->
 <?php $menus = ["Blog", "About", "Links"]; ?>
-<footer class="opacity-70">
+<footer >
     <div class="w-full flex flex-col items-center justify-center gap-5 lg:flex-row lg:h-36 my-20">
         <div class="text-center">
             <img class="mb-[7px]" src="<?php echo get_template_directory_uri() .

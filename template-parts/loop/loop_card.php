@@ -26,13 +26,13 @@ $has_post_thumbnail = has_post_thumbnail($post_id);
         <a href=<?php echo $permalink; ?>><?php echo $title; ?></a>
     </div>
     <div class="w-full flex flex-row justify-start items-center gap-1.5">
-        <div class="glass rounded-full overflow-hidden border-2 outline-glass w-9 h-9">
+        <a href=<?php echo $author_link ?> class="glass rounded-full overflow-hidden border-2 outline-glass w-9 h-9">
             <?php echo $avatar; ?>
-        </div>
+        </a>
         <div class="flex flex-col justify-center items-start leading-none font-normal">
             <a class="text-sm font-medium" href=<?php echo $author_link; ?>><?php echo ucwords(
-    $author
-); ?></a>
+                                                                                $author
+                                                                            ); ?></a>
             <time class="text-xs text-[#C5C5C5]"><?php echo $date; ?></time>
         </div>
     </div>
@@ -41,12 +41,12 @@ $has_post_thumbnail = has_post_thumbnail($post_id);
             echo "Tags: ";
             foreach ($tags as $tag) { ?>
                 <a class="m-[1px] px-1 glass text-[12px] rounded" href=<?php echo get_tag_link(
-                    $tag->term_id
-                ); ?>>#<?php echo str_replace(
-    " ",
-    "_",
-    strtoupper($tag->name)
-); ?></a>
+                                                                            $tag->term_id
+                                                                        ); ?>>#<?php echo str_replace(
+                            " ",
+                            "_",
+                            strtoupper($tag->name)
+                        ); ?></a>
         <?php }
         } ?>
     </div>

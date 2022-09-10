@@ -2,7 +2,7 @@
 
 get_template_part("template-parts/featured/featured");
 
-echo "<main>";
+echo "<main >";
 get_template_part("template-parts/loop/home_loop");
 echo "</main>";
 

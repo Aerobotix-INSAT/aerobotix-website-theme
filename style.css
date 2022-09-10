@@ -1242,11 +1242,11 @@ video {
 .pl-2 {
   padding-left: 0.5rem;
 }
-.pt-20 {
-  padding-top: 5rem;
+.pt-28 {
+  padding-top: 7rem;
 }
-.pb-2 {
-  padding-bottom: 0.5rem;
+.pb-6 {
+  padding-bottom: 1.5rem;
 }
 .text-center {
   text-align: center;
@@ -1322,9 +1322,6 @@ video {
 .underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
-}
-.opacity-70 {
-  opacity: 0.7;
 }
 .mix-blend-overlay {
   mix-blend-mode: overlay;
@@ -1446,15 +1443,13 @@ html {
 }
 
 .menu-item {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   font-weight: 400;
   /* add animation for hover */
 }
 
 .navbar .current-menu-item {
-  font-size: 1.5rem;
-  line-height: 2rem;
   font-weight: 700;
 }
 
@@ -1507,10 +1502,6 @@ html {
     padding-left: 6rem;
     padding-right: 6rem;
   }
-  .sm\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
 }
 @media (min-width: 768px) {
   .md\:h-full {
@@ -1544,8 +1535,8 @@ html {
   .md\:pr-4 {
     padding-right: 1rem;
   }
-  .md\:text-7xl {
-    font-size: 4.5rem;
+  .md\:text-6xl {
+    font-size: 3.75rem;
     line-height: 1;
   }
   .md\:text-base {

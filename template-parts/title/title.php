@@ -1,5 +1,5 @@
-<div id="title" class="w-full text-center flex flex-col justify-center px-6 sm:px-24 lg:px-56 pt-20 pb-2 gap-3 items-center ">
-    <h1 class="font-black text-5xl sm:text-6xl md:text-7xl break-all"><?php if (
+<div id="title" class="w-full text-center flex flex-col justify-center px-6 sm:px-24 lg:px-56 pt-28 pb-6 gap-3 items-center ">
+    <h1 class="font-black text-5xl md:text-6xl break-all"><?php if (
         is_home()
     ) {
         echo "Aerobotix Blog";

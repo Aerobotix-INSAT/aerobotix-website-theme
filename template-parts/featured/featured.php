@@ -23,7 +23,7 @@ $has_post_thumbnail = has_post_thumbnail($post_id);
 $excerpt = get_the_excerpt($post_id);
 ?>
 <section id="featured" class="flex flex-col md:flex-row w-full px-9 sm:px-14 h-fit py-9 mb-20 items-center gap-3 md:pl-0 md:pr-4" style="background-image: url(<?php echo get_template_directory_uri() .
-    "/assets/images/featured_bg.png"; ?>); background-size: cover; ">
+                                                                                                                                                                    "/assets/images/featured_bg.png"; ?>); background-size: cover; ">
     <div class="w-full h-auto max-w-lg md:h-full md:w-auto md:max-w-[45vw]">
         <a href=<?php echo $permalink; ?> class="block w-full h-full rounded-xl overflow-hidden md:rounded-l-none">
             <?php if ($has_post_thumbnail) {
@@ -37,13 +37,13 @@ $excerpt = get_the_excerpt($post_id);
     </div>
     <div class="max-w-lg px-3 flex flex-col gap-2 md:w-full md:max-w-none">
         <div class="w-full flex flex-row justify-start items-center gap-1.5">
-            <div class="glass rounded-full overflow-hidden border-2 outline-glass w-10 h-10">
+            <a href=<?php echo $author_link ?> class="glass rounded-full overflow-hidden border-2 outline-glass w-10 h-10">
                 <?php echo $avatar; ?>
-            </div>
+            </a>
             <div class="flex flex-col justify-center items-start leading-none font-normal">
                 <a class="text-sm font-medium" href=<?php echo $author_link; ?>><?php echo ucwords(
-    $author
-); ?></a>
+                                                                                    $author
+                                                                                ); ?></a>
                 <time class="text-xs text-[#C5C5C5]"><?php echo $date; ?></time>
             </div>
         </div>
@@ -60,12 +60,12 @@ $excerpt = get_the_excerpt($post_id);
                 echo "Tags: ";
                 foreach ($tags as $tag) { ?>
                     <a class="m-[1px] px-1 glass text-sm rounded" href=<?php echo get_tag_link(
-                        $tag->term_id
-                    ); ?>>#<?php echo str_replace(
-    " ",
-    "_",
-    strtoupper($tag->name)
-); ?></a>
+                                                                            $tag->term_id
+                                                                        ); ?>>#<?php echo str_replace(
+                                " ",
+                                "_",
+                                strtoupper($tag->name)
+                            ); ?></a>
             <?php }
             } ?>
         </div>

@@ -16,12 +16,14 @@
 </head>
 <?php
 $background= get_template_directory_uri() . "/assets/images/background.webp";
+$style='style="background: linear-gradient(180deg, #222222 10.58%, rgba(34, 34, 34, 0) 37.78%), url('. $background .'),#222222; background-size: cover,cover,cover;"';
+$background_style= is_home() || is_category() || is_tag() || is_author() || is_date() || is_search() ? $style:"";
 $default = get_template_directory_uri() . "/assets/images/red-gradient.jpg";
 $post_thumbnail = get_the_post_thumbnail_url(get_queried_object(), "");
 $thumbnail = $post_thumbnail ? $post_thumbnail : $default;
 ?>
-<body class="bg-background"
-style="background: linear-gradient(180deg, #222222 10.58%, rgba(34, 34, 34, 0) 37.78%), url(<?php echo $background ?>),#222222; background-size: cover,cover,cover;">
+<body class="bg-background" <?php echo $background_style ?>>
+
     <header class="bg-cover h-fit w-full overflow-hidden relative mb-20" style="
             background-image: linear-gradient(0deg, rgba(34,34,34,1) 0%, rgba(34,34,34,0.25) 100%),url('<?php echo $thumbnail; ?> ') ;  
             background-position:center ;">
