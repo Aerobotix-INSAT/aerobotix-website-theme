@@ -20,7 +20,7 @@ $style='style="background: linear-gradient(180deg, #222222 10.58%, rgba(34, 34, 
 $background_style= is_home() || is_category() || is_tag() || is_author() || is_date() || is_search() || get_post_field( 'post_name', get_post() ) == "blog" ? $style:"";
 $default = get_template_directory_uri() . "/assets/images/red-gradient.jpg";
 $post_thumbnail = get_the_post_thumbnail_url(get_queried_object(), "");
-$thumbnail = $post_thumbnail ? $post_thumbnail : $default;
+$thumbnail = $post_thumbnail && !(is_home() || is_category() || is_tag() || is_author() || is_date() || is_search() || get_post_field( 'post_name', get_post() ) == "blog") ? $post_thumbnail : $default;
 if(is_singular())
     if ( have_posts() ) 
         the_post();
