@@ -9,6 +9,5 @@
 
     </div>
     <div class="nav-icon"><i class="fa-solid fa-bars open"></i><i class="hidden fa-solid fa-xmark close"></i></div>
-    <div class="glass text-2xl hidden lg:flex flex-row justify-between px-3 w-max rounded-md items-center gap-2"><a href="<?php echo home_url(); ?>">About Aerobotix</a><i class="fa-solid fa-angles-right"></i></div>
 
 </nav>

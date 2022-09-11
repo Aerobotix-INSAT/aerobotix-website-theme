@@ -1,6 +1,6 @@
 <?php
 if ($args["post"]) {
-    $query = $args["post"];
+    $post = $args["post"];
 } else {
     $post = $wp_query->the_post();
 }

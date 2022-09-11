@@ -1,71 +1,62 @@
-<?php if (is_author()):
-        get_template_part("template-parts/title/title-author");
-    elseif (is_single()):
-        get_template_part("template-parts/title/title-post");
-    else:
+<?php
+if (is_author()) {
+    get_template_part("template-parts/title/title-author");
+} elseif (is_single()) {
+    get_template_part("template-parts/title/title-post");
+} else {
+    if (is_home() || is_front_page() ) {
+        
+        $query = new WP_Query(["pagename" => "blog"]);
+        if ($query->have_posts()) {
+            //var_dump($query);
+            $query->the_post();
+            $title = $query->queried_object->post_title;
+            $content = $query->queried_object->post_content;
+        }
+    } else {
+        if (is_category()) {
+            $title = "Category: " . single_cat_title("", false);
+            $content = category_description();
+        } elseif (is_tag()) {
+            $title = "#" . str_replace(" ", "_", single_tag_title("", false));
+            $content = tag_description();
+        } elseif (is_day()) {
+            $title = "Day: " . get_the_date();
+            $content = "Day: " . get_the_date();
+        } elseif (is_month()) {
+            $title = "Month: " . get_the_date("F Y");
+            $content = "Month: " . get_the_date("F Y");
+        } elseif (is_year()) {
+            $title = "Year: " . get_the_date("Y");
+            $content = "Year: " . get_the_date("Y");
+        } elseif (is_search()) {
+            $title = "Search: " . get_search_query();
+            $content = "Search: " . get_search_query();
+        } elseif (is_404()) {
+            $title = "Page not found";
+            $content = "Please check the url";
+        } elseif (is_page()) {
+            $title = get_the_title();
+            $content= get_post_field( 'post_name', get_post() ) == "blog"? get_the_content() : "";
+        } else {
+            $title = "Aerobotix Blog";
+            $content = "The official blog of Aerobotix";
+        }
+    }
 ?>
-<div id="title" class="w-full text-center flex flex-col justify-center px-6 sm:px-24 lg:px-56 pt-28 pb-6 gap-3 items-center ">
-    <h1 class="font-black text-5xl md:text-6xl break-all"><?php if (
-        is_home()
-    ) {
-        echo "Aerobotix Blog";
-    } elseif (is_category()) {
-        echo "Category: " . single_cat_title("", false);
-    } elseif (is_tag()) {
-        echo "#" . str_replace(" ", "_", single_tag_title("", false));
-    } elseif (is_author()) {
-        get_template_part("template-parts/title/title-author");
-    } elseif (is_day()) {
-        echo "Day: " . get_the_date();
-    } elseif (is_month()) {
-        echo "Month: " . get_the_date("F Y");
-    } elseif (is_year()) {
-        echo "Year: " . get_the_date("Y");
-    } elseif (is_search()) {
-        echo "Search: " . get_search_query();
-    } elseif (is_404()) {
-        echo "Page not found";
-    } elseif (is_page()) {
-        echo get_the_title();
-    } ?>
-    </h1>
+    <div id="title" class="w-full text-center flex flex-col justify-center px-6 sm:px-24 lg:px-56 pt-28 pb-6 gap-3 items-center ">
+        <h1 class="font-black text-5xl md:text-6xl break-all">
+            <?php echo $title ?>
+        </h1>
+        <p class="text-normal text-sm md:text-base">
+            <?php echo $content ?>
+        </p>
+    </div>
+<?php
+}
 
-    <?php if (is_home()) {
-        echo '<div class="text-normal text-sm md:text-base">' .
-            get_the_content(null, false, get_queried_object()) .
-            "</div>";
-    } elseif (is_category()) {
-        echo '<p class="text-normal text-sm md:text-base">' .
-            category_description() .
-            "</p>";
-    } elseif (is_tag()) {
-        echo '<p class="text-normal text-sm md:text-base">' .
-            tag_description() .
-            "</p>";
-    } elseif (is_day()) {
-        echo '<p class="text-normal text-sm md:text-base">' .
-            "Day: " .
-            get_the_date() .
-            "</p>";
-    } elseif (is_month()) {
-        echo '<p class="text-normal text-sm md:text-base">' .
-            "Month: " .
-            get_the_date("F Y") .
-            "</p>";
-    } elseif (is_year()) {
-        echo '<p class="text-normal text-sm md:text-base">' .
-            "Year: " .
-            get_the_date("Y") .
-            "</p>";
-    } elseif (is_search()) {
-        echo '<p class="text-normal text-sm md:text-base">' .
-            "Search: " .
-            get_search_query() .
-            "</p>";
-    } elseif (is_404()) {
-        echo '<p class="text-normal text-sm md:text-base">' .
-            "Please check the url" .
-            "</p>";
-    } ?>
-</div>
-<?php endif ?>
+
+
+
+
+?>

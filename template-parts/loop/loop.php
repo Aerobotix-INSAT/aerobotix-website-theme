@@ -10,7 +10,7 @@ if ($args["query"]) {
             while ($query->have_posts()):
                 $query->the_post();
                 get_template_part("template-parts/loop/loop_card", null, [
-                    "post" => $post,
+                    "post" => $query->post,
                 ]);
             endwhile;
         else:

@@ -1,9 +1,12 @@
 <?php
 $categories = get_categories();
+
+
 //set a custom wordpress query object
 $args = [
     "post_type" => "post",
     "posts_per_page" => 3,
+    "orderby" => "date",
 ];
 foreach ($categories as $category) {
     $args["category_name"] = $category->slug;
