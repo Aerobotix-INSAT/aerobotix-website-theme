@@ -1,4 +1,5 @@
 <!-- here goes the footer code -->
+
 <?php $menus = ["Blog", "About", "Links"]; ?>
 <footer >
     <div class="w-full flex flex-col items-center justify-center gap-5 lg:flex-row lg:h-36 my-20">
@@ -21,12 +22,13 @@
             } ?>
         </div>
     </div>
-    <div class="mix-blend-overlay flex items-center justify-center mb-16">
+    <div class="mix-blend-overlay flex items-center justify-center pb-16">
         <img  class="max-w-3xl w-full" src="<?php echo get_template_directory_uri() .
             "/assets/images/artwork.png"; ?>">
     </div>
 </footer>
 <?php wp_footer(); ?>
+        </div>
 </body>
 
 </html>

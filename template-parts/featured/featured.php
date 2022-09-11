@@ -62,10 +62,10 @@ $excerpt = get_the_excerpt($post_id);
                     <a class="m-[1px] px-1 glass text-sm rounded" href=<?php echo get_tag_link(
                                                                             $tag->term_id
                                                                         ); ?>>#<?php echo str_replace(
-                                " ",
-                                "_",
-                                strtoupper($tag->name)
-                            ); ?></a>
+                                                                                    " ",
+                                                                                    "_",
+                                                                                    strtoupper($tag->name)
+                                                                                ); ?></a>
             <?php }
             } ?>
         </div>

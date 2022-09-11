@@ -10,24 +10,26 @@ Author URI: https://github.com/mahdichaari01
 html {
   color: white;
 }
-.glass {
-  background: linear-gradient(
-    253.09deg,
-    rgba(217, 217, 217, 0.25) -7.53%,
-    rgba(217, 217, 217, 0) 97.04%
-  );
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.52);
-  backdrop-filter: blur(50px);
-}
-.glass:hover,
-.glass:active,
-.glass:focus {
-  outline: 2px solid;
-  outline-color: rgba(240, 248, 255, 0.568);
-  filter: brightness(1.25);
-}
-.glass:hover img {
-  filter: brightness(0.8);
+@layer components {
+  .glass {
+    background: linear-gradient(
+      253.09deg,
+      rgba(217, 217, 217, 0.25) -7.53%,
+      rgba(217, 217, 217, 0) 97.04%
+    );
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.52);
+    backdrop-filter: blur(50px);
+  }
+  .glass:hover,
+  .glass:active,
+  .glass:focus {
+    outline: 2px solid;
+    outline-color: rgba(240, 248, 255, 0.568);
+    filter: brightness(1.25);
+  }
+  .glass:hover img {
+    filter: brightness(0.8);
+  }
 }
 
 /* navbar styles */
@@ -92,8 +94,65 @@ html {
 }
 .footer-nav-menu .menu-item {
   @apply block w-fit text-xl;
-
 }
-.footer-nav-menu{
-  @apply flex flex-col items-center lg:items-start ;
+.footer-nav-menu {
+  @apply flex flex-col items-center lg:items-start;
+}
+
+/* comment section styles */
+#comments {
+  @apply text-lg font-bold mb-4;
+}
+#reply-title {
+  @apply text-lg font-bold;
+}
+.comment-form-url,
+.comment-meta,
+.comment-body br {
+  display: none;
+}
+.comment-body {
+  @apply flex flex-col gap-2  p-4;
+}
+.even {
+  @apply bg-background;
+}
+.comment-author {
+  @apply flex gap-2 items-center h-5 font-medium;
+}
+.comment-awaiting-moderation {
+  @apply font-normal text-sm text-lime-700;
+}
+.reply, .submit {
+  @apply glass text-2xl font-bold flex flex-row justify-center px-3 w-full rounded-md items-center h-fit py-1 my-5;
+}
+.submit{
+  @apply break-words w-4/5 mx-auto
+}
+.comment-body br {
+  display: none;
+}
+.comment-author .avatar {
+  @apply w-8 h-8 rounded-full;
+}
+.comment-meta {
+  @apply text-sm;
+}
+#respond{
+  @apply my-8
+}
+.comment-form-comment,.comment-form-author,.comment-form-email{
+  @apply flex flex-col justify-start items-start w-4/5 mx-auto mb-4;
+}
+#comment{
+  @apply w-full
+}
+.comment-form-comment label,.comment-form-author label,.comment-form-email label{
+  @apply font-bold text-lg m-2;
+}
+.comment-form-comment textarea,.comment-form-author input,.comment-form-email input{
+  @apply bg-background w-full p-2 rounded-md border-[1px] border-gray-500 focus:outline-none focus:border-blue-500;
+}
+.comment-form-cookies-consent{
+  @apply break-words w-4/5 mx-auto
 }

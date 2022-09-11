@@ -1,6 +1,3 @@
-<?php get_header(); ?>
-<div class="prose prose-invert">
-    <h1>author page</h1>
-    <p>work in progress</p>
-</div>
-<?php get_footer(); ?>
+<?php get_header(); 
+get_template_part("template-parts/loop/loop");
+get_footer(); ?>

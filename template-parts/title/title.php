@@ -1,3 +1,9 @@
+<?php if (is_author()):
+        get_template_part("template-parts/title/title-author");
+    elseif (is_single()):
+        get_template_part("template-parts/title/title-post");
+    else:
+?>
 <div id="title" class="w-full text-center flex flex-col justify-center px-6 sm:px-24 lg:px-56 pt-28 pb-6 gap-3 items-center ">
     <h1 class="font-black text-5xl md:text-6xl break-all"><?php if (
         is_home()
@@ -21,9 +27,8 @@
         echo "Page not found";
     } elseif (is_page()) {
         echo get_the_title();
-    } else {
-        get_template_part("template-parts/title/title-post");
-    } ?></h1>
+    } ?>
+    </h1>
 
     <?php if (is_home()) {
         echo '<div class="text-normal text-sm md:text-base">' .
@@ -63,3 +68,4 @@
             "</p>";
     } ?>
 </div>
+<?php endif ?>

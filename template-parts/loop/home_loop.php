@@ -17,7 +17,7 @@ foreach ($categories as $category) {
             "query" => $query,
         ]);
         echo "</div>";
-        echo "</div>";
+        
     }
 }
 
