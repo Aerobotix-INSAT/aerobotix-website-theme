@@ -46,23 +46,21 @@ if (!function_exists("aerobotix_theme_enqueue_scripts")):
             strval(time()) // TODO : Change this to a version number for production
         );
 
-        // Conditionally Enqueue the main JS file.
-        if (is_front_page()) {
+        
+        
             wp_enqueue_script(
                 "front",
                 get_template_directory_uri() . "/scripts/front-page.js",
-                "1.0.0",
                 true
             );
-        } else {
+        
             wp_enqueue_script(
                 "main",
                 get_template_directory_uri() . "/scripts/main.js",
                 [],
-                false,
                 true
             );
-        }
+        
     }
 endif; // aerobotix_theme_enqueue_scripts
 add_action("wp_enqueue_scripts", "aerobotix_theme_enqueue_scripts");

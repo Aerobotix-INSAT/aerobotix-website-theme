@@ -39,20 +39,22 @@ html {
 
 /* navbar styles */
 .navbar {
-  @apply flex justify-between w-full h-fit px-8 py-4 items-center z-10;
+  @apply flex justify-between w-full h-fit px-8 py-4 items-center z-10 flex-nowrap gap-3;
 }
 
-.nav-menu {
-  @apply hidden md:flex justify-between w-fit gap-6 items-center;
+ .nav-menu {
+  @apply hidden md:flex justify-end md:h-7 gap-6 items-center flex-wrap gap-y-[2px] md:overflow-hidden;
 }
+/*
 .nav-icon {
   @apply text-3xl  static md:hidden;
 }
 .nav-icon:hover {
   @apply cursor-pointer;
-}
+} */
 .navbar-active {
-  @apply flex-col fixed justify-center gap-11 w-full h-screen py-7 bg-background;
+  @apply flex-col fixed justify-center gap-11 w-full h-screen py-7;
+  background: var(--background);
 }
 .navbar-active .nav-menu {
   @apply flex flex-col gap-5;
