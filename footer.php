@@ -4,7 +4,7 @@
 <footer >
     <div class="w-full flex flex-col items-center justify-center gap-5 lg:flex-row lg:h-36 my-20">
         <div class="text-center">
-            <img class="mb-[7px]" src="<?php echo get_template_directory_uri() .
+            <img alt="Aerobotix Logo" class="mb-[7px]" src="<?php echo get_template_directory_uri() .
             "/assets/images/logo-white.png"; ?>">
             <?php echo make_clickable($GLOBALS['cgv']['email']) ?>
         </div>
@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="mix-blend-overlay flex items-center justify-center pb-16">
-        <img  class="max-w-3xl w-full" src="<?php echo get_template_directory_uri() .
+        <img alt="Learn, Create, Innovate" class="max-w-3xl w-full" src="<?php echo get_template_directory_uri() .
             "/assets/images/artwork.png"; ?>">
     </div>
 </footer>

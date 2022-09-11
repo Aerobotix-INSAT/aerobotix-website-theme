@@ -308,6 +308,10 @@ video {
   max-width: 100%;
   height: auto;
 }
+:root {
+    --background: #333333;
+    --background-25: #33333319;
+  }
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -1142,8 +1146,8 @@ video {
 .grid-cols-\[repeat\(auto-fit\2c 10rem\)\] {
   grid-template-columns: repeat(auto-fit,10rem);
 }
-.grid-cols-\[fit_content\(20rem\)\] {
-  grid-template-columns: fit content(20rem);
+.grid-cols-\[fit-content\(20rem\)\] {
+  grid-template-columns: fit-content(20rem);
 }
 .flex-row {
   flex-direction: row;
@@ -1390,12 +1394,6 @@ video {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
-}
-@layer {
-  :root {
-    --background: #333333;
-    --background-25: #33333319;
-  }
 }
 html {
   color: white;
@@ -1677,8 +1675,6 @@ html {
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(107 114 128 / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--background) / var(--tw-bg-opacity));
   padding: 0.5rem;
 }
 .comment-form-comment textarea:focus, 
@@ -1688,6 +1684,11 @@ html {
   border-color: rgb(59 130 246 / var(--tw-border-opacity));
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+.comment-form-comment textarea,
+.comment-form-author input,
+.comment-form-email input {
+  background-color: var(--background);
 }
 .comment-form-cookies-consent {
   margin-left: auto;

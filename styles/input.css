@@ -6,7 +6,7 @@ Author URI: https://github.com/mahdichaari01
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@layer {
+@layer base{
   :root {
     --background: #333333;
     --background-25: #33333319;
@@ -168,7 +168,8 @@ html {
 .comment-form-comment textarea,
 .comment-form-author input,
 .comment-form-email input {
-  @apply bg-background w-full p-2 rounded-md border-[1px] border-gray-500 focus:outline-none focus:border-blue-500;
+  @apply w-full p-2 rounded-md border-[1px] border-gray-500 focus:outline-none focus:border-blue-500;
+  background-color: var(--background);
 }
 .comment-form-cookies-consent {
   @apply break-words w-4/5 mx-auto;

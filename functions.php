@@ -51,6 +51,8 @@ if (!function_exists("aerobotix_theme_enqueue_scripts")):
             wp_enqueue_script(
                 "front",
                 get_template_directory_uri() . "/scripts/front-page.js",
+                [],
+                '',
                 true
             );
         
@@ -58,6 +60,7 @@ if (!function_exists("aerobotix_theme_enqueue_scripts")):
                 "main",
                 get_template_directory_uri() . "/scripts/main.js",
                 [],
+                '',
                 true
             );
         
