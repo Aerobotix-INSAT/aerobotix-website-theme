@@ -1920,13 +1920,13 @@ html {
     font-size: 3rem;
     line-height: 1;
   }
-  .md\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 }
 @media (min-width: 1024px) {
