@@ -14,7 +14,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        background: "#222222",
+        background: 'hsl(var(--background) / <alpha-value>)',
         primary: "#E91921",
         secondary: "#0967AA",
         glass: "#FDFAFA80",

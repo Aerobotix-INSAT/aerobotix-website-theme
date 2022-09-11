@@ -6,7 +6,12 @@ Author URI: https://github.com/mahdichaari01
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@layer {
+  :root {
+    --background: #333333;
+    --background-25: #33333319;
+  }
+}
 html {
   color: white;
 }
@@ -47,8 +52,7 @@ html {
   @apply cursor-pointer;
 }
 .navbar-active {
-  @apply flex-col fixed justify-center gap-11 w-full h-screen py-7;
-  background-color: #222222;
+  @apply flex-col fixed justify-center gap-11 w-full h-screen py-7 bg-background;
 }
 .navbar-active .nav-menu {
   @apply flex flex-col gap-5;
@@ -114,20 +118,25 @@ html {
 .comment-body {
   @apply flex flex-col gap-2  p-4;
 }
-.even {
-  @apply bg-background;
+.comment {
+  @apply p-2 rounded-md border-[1px] border-gray-500 focus:outline-none w-4/5;
+}
+.commentlist,
+.children {
+  @apply flex flex-col gap-2 w-full items-center;
 }
 .comment-author {
-  @apply flex gap-2 items-center h-5 font-medium;
+  @apply flex gap-2 items-center h-5 font-bold text-lg mb-2;
 }
 .comment-awaiting-moderation {
   @apply font-normal text-sm text-lime-700;
 }
-.reply, .submit {
-  @apply glass text-2xl font-bold flex flex-row justify-center px-3 w-full rounded-md items-center h-fit py-1 my-5;
+.reply,
+.submit {
+  @apply glass text-2xl font-bold flex flex-row justify-center px-3 w-full rounded-md items-center h-fit py-1 mt-5;
 }
-.submit{
-  @apply break-words w-4/5 mx-auto
+.submit {
+  @apply break-words w-4/5 mx-auto;
 }
 .comment-body br {
   display: none;
@@ -138,21 +147,27 @@ html {
 .comment-meta {
   @apply text-sm;
 }
-#respond{
-  @apply my-8
+#respond {
+  @apply my-8;
 }
-.comment-form-comment,.comment-form-author,.comment-form-email{
+.comment-form-comment,
+.comment-form-author,
+.comment-form-email {
   @apply flex flex-col justify-start items-start w-4/5 mx-auto mb-4;
 }
-#comment{
-  @apply w-full
+#comment {
+  @apply w-full;
 }
-.comment-form-comment label,.comment-form-author label,.comment-form-email label{
+.comment-form-comment label,
+.comment-form-author label,
+.comment-form-email label {
   @apply font-bold text-lg m-2;
 }
-.comment-form-comment textarea,.comment-form-author input,.comment-form-email input{
+.comment-form-comment textarea,
+.comment-form-author input,
+.comment-form-email input {
   @apply bg-background w-full p-2 rounded-md border-[1px] border-gray-500 focus:outline-none focus:border-blue-500;
 }
-.comment-form-cookies-consent{
-  @apply break-words w-4/5 mx-auto
+.comment-form-cookies-consent {
+  @apply break-words w-4/5 mx-auto;
 }
