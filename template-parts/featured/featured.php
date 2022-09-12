@@ -7,13 +7,17 @@ if ($query->have_posts()) {
     $query->the_post();
     $post = $query->post;
 }
-
+if ( function_exists( 'coauthors_posts_links' ) ) {
+    $author_link=coauthors_posts_links($between = null, $betweenLast = null, $before = null, $after = null, $echo = false);
+} else {
+    $author_link=get_the_author_posts_link();
+}
 $post_id = $post->ID;
 $title = $post->post_title;
 $permalink = get_permalink($post_id);
 $thumbnail = get_the_post_thumbnail($post_id, "", ["class" => "object-cover w-full h-auto max-w-lg md:h-[clamp(15rem,17rem,100%)] md:w-[clamp(20rem,100%,36rem)]"]);
 $author = get_the_author_meta("display_name", $post->post_author);
-$author_link = get_author_posts_url($post->post_author);
+$default_author_link = get_author_posts_url($post->post_author);
 $date = get_the_date("F j, Y", $post_id);
 $tags = get_the_tags($post_id);
 $avatar = get_avatar($post->post_author, 60, "", "", [
@@ -36,13 +40,11 @@ $excerpt = get_the_excerpt($post_id);
     </div>
     <div class="max-w-lg px-3 flex flex-col gap-2 md:w-full md:max-w-lg">
         <div class="w-full flex flex-row justify-start items-center gap-1.5">
-            <a href="<?php echo $author_link ?>" class="glass rounded-full overflow-hidden w-10 h-10">
+            <a href="<?php echo $default_author_link ?>" class="glass rounded-full overflow-hidden w-10 h-10">
                 <?php echo $avatar; ?>
             </a>
             <div class="flex flex-col justify-center items-start leading-none font-normal">
-                <a class="text-sm font-medium" href=<?php echo $author_link; ?>><?php echo ucwords(
-                                                                                    $author
-                                                                                ); ?></a>
+                <p class="text-sm font-medium line-clamp-1" > <?php echo $author_link ?> </p>
                 <time class="text-xs text-[#C5C5C5]"><?php echo $date; ?></time>
             </div>
         </div>
