@@ -1139,9 +1139,6 @@ video {
 .max-w-\[55rem\] {
   max-width: 55rem;
 }
-.max-w-\[50rem\] {
-  max-width: 50rem;
-}
 .max-w-lg {
   max-width: 32rem;
 }
@@ -1718,6 +1715,9 @@ html {
   margin-right: auto;
   width: 80%;
   overflow-wrap: break-word;
+}
+.comment-form{
+
 }
 .hover\:cursor-pointer:hover {
   cursor: pointer;

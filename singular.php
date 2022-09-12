@@ -13,7 +13,7 @@
         </i>
 
     </main>
-    <aside class="container max-w-[50rem] bg-[#1a1a1ae0] p-4">
+    <aside class="container max-w-[55rem] bg-[#1a1a1ae0] p-4">
         __________<br><br>
         <?php
         if (comments_open()) {
