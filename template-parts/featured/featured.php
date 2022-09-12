@@ -17,7 +17,7 @@ $author_link = get_author_posts_url($post->post_author);
 $date = get_the_date("F j, Y", $post_id);
 $tags = get_the_tags($post_id);
 $avatar = get_avatar($post->post_author, 60, "", "", [
-    "class" => "h-auto max-w-full",
+    "class" => "w-10 h-10 object-cover",
 ]);
 $has_post_thumbnail = has_post_thumbnail($post_id);
 $excerpt = get_the_excerpt($post_id);
@@ -36,7 +36,7 @@ $excerpt = get_the_excerpt($post_id);
     </div>
     <div class="max-w-lg px-3 flex flex-col gap-2 md:w-full md:max-w-lg">
         <div class="w-full flex flex-row justify-start items-center gap-1.5">
-            <a href=<?php echo $author_link ?> class="glass rounded-full overflow-hidden w-10 h-10">
+            <a href="<?php echo $author_link ?>" class="glass rounded-full overflow-hidden w-10 h-10">
                 <?php echo $avatar; ?>
             </a>
             <div class="flex flex-col justify-center items-start leading-none font-normal">

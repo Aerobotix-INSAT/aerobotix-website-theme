@@ -24,24 +24,22 @@ $avatar = get_avatar($post->post_author, 60, "", "", [
 $has_post_thumbnail = has_post_thumbnail($post_id);
 ?>
 
-<article class="glass h-fit w-72 rounded-3xl gapx-5 overflow-hidden m-3 pt-4 pb-2">
+<article class="glass h-fit w-72 md:w-64 rounded-3xl gapx-5 overflow-hidden m-3 pt-4 pb-2">
     <div class="mb-3 px-5 w-full flex flex-row justify-start items-center gap-1.5">
-        <a href=<?php echo $author_link ?> class="glass rounded-full overflow-hidden w-9 h-9">
+        <a href=<?php echo $author_link ?> class="rounded-full overflow-hidden w-9 h-9">
             <?php echo $avatar; ?>
         </a>
         <div class="flex flex-col justify-center items-start leading-none font-normal">
-            <a class="text-sm font-medium" href=<?php echo $author_link; ?>><?php echo ucwords(
-                                                                                $author
-                                                                            ); ?></a>
+            <a class="text-[0.8rem] font-medium" href=<?php echo $author_link; ?>><?php echo ucwords(
+                                                                                        $author
+                                                                                    ); ?></a>
             <time class="text-xs text-[#C5C5C5]" datetime="<?php echo $date_html ?>"><?php echo $date; ?></time>
         </div>
     </div>
-    <div class="font-bold text-2xl w-full leading-tight text-ellipsis h-[5.7rem] line-clamp-3 mb-5 px-5">
-        <a href=<?php echo $permalink ?>>
-            <h1><?php echo $title; ?></h1>
-        </a>
-    </div>
-    <a href=<?php echo $permalink; ?> class="block w-[93%] mx-auto h-40 rounded-xl overflow-hidden mb-3 brightness-105">
+    <a href=<?php echo $permalink ?> class="font-bold text-xl w-full leading-tight h-[4.2rem] mb-5 px-5 line-clamp-3">
+        <h1><?php echo $title; ?></h1>
+    </a>
+    <a href=<?php echo $permalink; ?> class="block w-[91%] mx-auto h-40 rounded-xl overflow-hidden mb-2 brightness-105">
         <?php if ($has_post_thumbnail) {
             echo $thumbnail;
         } else {
@@ -51,19 +49,19 @@ $has_post_thumbnail = has_post_thumbnail($post_id);
         } ?>
 
     </a>
-    <div class="font-medium w-[110%] text-sm line-clamp-1 px-5">
+    <div class="font-medium w-full text-sm line-clamp-1 px-5">
         <?php if ($tags) {
             echo "Tags: ";
             foreach ($tags as $tag) { ?>
-                <a href=<?php echo get_tag_link(
+                <a href="<?php echo get_tag_link(
                             $tag->term_id
-                        ); ?> class="m-[1px] px-1 glass text-[12px] rounded">#<?php echo str_replace(
+                        ); ?>" class="m-[1px] px-1 glass text-[12px] rounded">#<?php echo str_replace(
                                                                                     " ",
                                                                                     "_",
                                                                                     strtoupper($tag->name)
                                                                                 ); ?></a>
         <?php }
-        } else echo "No Tags" ?>
+        } else echo '<p class="text-center"> <text class="m-[1px] px-1 glass text-[12px] rounded">No Tags</p>' ?>
     </div>
 
 </article>

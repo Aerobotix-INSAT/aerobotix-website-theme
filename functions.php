@@ -47,7 +47,7 @@ if (!function_exists("aerobotix_theme_enqueue_scripts")):
             "style",
             get_stylesheet_uri(),
             [],
-            strval(time()) // TODO : Change this to a version number for production
+            false // TODO : Change this to a version number for production
         );
 
         
