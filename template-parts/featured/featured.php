@@ -36,7 +36,7 @@ $excerpt = get_the_excerpt($post_id);
     </div>
     <div class="max-w-lg px-3 flex flex-col gap-2 md:w-full md:max-w-lg">
         <div class="w-full flex flex-row justify-start items-center gap-1.5">
-            <a href=<?php echo $author_link ?> class="glass rounded-full overflow-hidden border-2 outline-glass w-10 h-10">
+            <a href=<?php echo $author_link ?> class="glass rounded-full overflow-hidden w-10 h-10">
                 <?php echo $avatar; ?>
             </a>
             <div class="flex flex-col justify-center items-start leading-none font-normal">
