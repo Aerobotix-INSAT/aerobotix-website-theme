@@ -3,7 +3,7 @@
 <?php $menus = ["Blog", "About", "Links"]; ?>
 <footer>
     <div class="w-full flex flex-col items-center justify-center gap-5 lg:flex-row lg:h-36 my-20">
-        <div class="text-center w-[30rem]">
+        <div class="text-center w-[370px] md:w-[23rem]">
             <?php if (function_exists('the_custom_logo')) {
                 the_custom_logo();
             } ?>
