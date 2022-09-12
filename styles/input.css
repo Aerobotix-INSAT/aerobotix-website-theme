@@ -118,7 +118,7 @@ html {
   display: none;
 }
 .comment-body {
-  @apply flex flex-col gap-2  p-4;
+  @apply flex flex-col gap-2  p-4 break-words;
 }
 .comment {
   @apply p-2 rounded-md border-[1px] border-gray-500 focus:outline-none w-4/5;
@@ -155,7 +155,7 @@ html {
 .comment-form-comment,
 .comment-form-author,
 .comment-form-email {
-  @apply flex flex-col justify-start items-start w-4/5 mx-auto mb-4;
+  @apply flex flex-col justify-start items-start w-4/5 mx-auto mb-4
 }
 #comment {
   @apply w-full;
@@ -168,7 +168,7 @@ html {
 .comment-form-comment textarea,
 .comment-form-author input,
 .comment-form-email input {
-  @apply w-full p-2 rounded-md border-[1px] border-gray-500 focus:outline-none focus:border-blue-500;
+  @apply w-full p-2 rounded-md border-[1px] border-gray-500 focus:outline-none focus:border-blue-500 line-clamp-6;
   background-color: var(--background);
 }
 .comment-form-cookies-consent {

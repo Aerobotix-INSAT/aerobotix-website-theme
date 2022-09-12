@@ -11,7 +11,7 @@ if ($query->have_posts()) {
 $post_id = $post->ID;
 $title = $post->post_title;
 $permalink = get_permalink($post_id);
-$thumbnail = get_the_post_thumbnail($post_id, "", ["class" => "h-full w-auto"]);
+$thumbnail = get_the_post_thumbnail($post_id, "", ["class" => "object-cover w-full h-auto max-w-lg md:h-[clamp(15rem,17rem,100%)] md:w-[36rem]"]);
 $author = get_the_author_meta("display_name", $post->post_author);
 $author_link = get_author_posts_url($post->post_author);
 $date = get_the_date("F j, Y", $post_id);
@@ -22,10 +22,10 @@ $avatar = get_avatar($post->post_author, 60, "", "", [
 $has_post_thumbnail = has_post_thumbnail($post_id);
 $excerpt = get_the_excerpt($post_id);
 ?>
-<section id="featured" class="flex flex-col md:flex-row w-full px-9 sm:px-14 h-fit py-9 mb-20 items-center gap-3 md:pl-0 md:pr-4" style="background-image: url(<?php echo get_template_directory_uri() .
+<section id="featured" class="flex flex-col md:flex-row w-full px-9 sm:px-14 h-fit py-9 mb-20 items-center gap-3 md:p-4 justify-center" style="background-image: url(<?php echo get_template_directory_uri() .
                                                                                                                                                                     "/assets/images/featured_bg.png"; ?>); background-size: cover; ">
-    <div class="w-full h-auto max-w-lg md:h-full md:w-auto md:max-w-[45vw]">
-        <a href=<?php echo $permalink; ?> class="block w-full h-full rounded-xl overflow-hidden md:rounded-l-none">
+    <div class="w-full h-auto max-w-lg md:h-[clamp(15rem,17rem,100%)] md:w-[35rem] shrink-0 rounded-xl overflow-hidden outline-2 outline">
+        <a href=<?php echo $permalink; ?> class="block w-full h-full">
             <?php if ($has_post_thumbnail) {
                 echo $thumbnail;
             } else {
@@ -35,7 +35,7 @@ $excerpt = get_the_excerpt($post_id);
             } ?>
         </a>
     </div>
-    <div class="max-w-lg px-3 flex flex-col gap-2 md:w-full md:max-w-none">
+    <div class="max-w-lg px-3 flex flex-col gap-2 md:w-full md:max-w-lg">
         <div class="w-full flex flex-row justify-start items-center gap-1.5">
             <a href=<?php echo $author_link ?> class="glass rounded-full overflow-hidden border-2 outline-glass w-10 h-10">
                 <?php echo $avatar; ?>

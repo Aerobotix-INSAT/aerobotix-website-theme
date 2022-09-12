@@ -1087,9 +1087,6 @@ video {
 .w-\[2px\] {
   width: 2px;
 }
-.w-auto {
-  width: auto;
-}
 .w-10 {
   width: 2.5rem;
 }
@@ -1114,11 +1111,11 @@ video {
 .max-w-\[50rem\] {
   max-width: 50rem;
 }
-.max-w-full {
-  max-width: 100%;
-}
 .max-w-lg {
   max-width: 32rem;
+}
+.max-w-full {
+  max-width: 100%;
 }
 .flex-none {
   flex: none;
@@ -1204,6 +1201,9 @@ video {
 }
 .text-ellipsis {
   text-overflow: ellipsis;
+}
+.break-words {
+  overflow-wrap: break-word;
 }
 .break-all {
   word-break: break-all;
@@ -1371,6 +1371,12 @@ video {
 .mix-blend-overlay {
   mix-blend-mode: overlay;
 }
+.outline {
+  outline-style: solid;
+}
+.outline-2 {
+  outline-width: 2px;
+}
 .outline-glass {
   outline-color: #FDFAFA80;
 }
@@ -1536,6 +1542,7 @@ html {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  overflow-wrap: break-word;
   padding: 1rem;
 }
 .comment {
@@ -1676,6 +1683,10 @@ html {
   --tw-border-opacity: 1;
   border-color: rgb(107 114 128 / var(--tw-border-opacity));
   padding: 0.5rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
 }
 .comment-form-comment textarea:focus, 
 .comment-form-author input:focus, 
@@ -1885,20 +1896,20 @@ html {
   .md\:hidden {
     display: none;
   }
-  .md\:h-full {
-    height: 100%;
+  .md\:h-\[clamp\(15rem\2c 17rem\2c 100\%\)\] {
+    height: clamp(15rem,17rem,100%);
   }
-  .md\:w-auto {
-    width: auto;
+  .md\:w-\[36rem\] {
+    width: 36rem;
+  }
+  .md\:w-\[35rem\] {
+    width: 35rem;
   }
   .md\:w-full {
     width: 100%;
   }
-  .md\:max-w-\[45vw\] {
-    max-width: 45vw;
-  }
-  .md\:max-w-none {
-    max-width: none;
+  .md\:max-w-lg {
+    max-width: 32rem;
   }
   .md\:grid-cols-\[repeat\(2\2c fit-content\(20rem\)\)\] {
     grid-template-columns: repeat(2,fit-content(20rem));
@@ -1906,15 +1917,8 @@ html {
   .md\:flex-row {
     flex-direction: row;
   }
-  .md\:rounded-l-none {
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-  }
-  .md\:pl-0 {
-    padding-left: 0px;
-  }
-  .md\:pr-4 {
-    padding-right: 1rem;
+  .md\:p-4 {
+    padding: 1rem;
   }
   .md\:text-5xl {
     font-size: 3rem;
