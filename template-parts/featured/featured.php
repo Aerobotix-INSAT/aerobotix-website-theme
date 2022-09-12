@@ -47,7 +47,7 @@ $excerpt = get_the_excerpt($post_id);
             </div>
         </div>
         <div class="font-black text-2xl lg:text-3xl xl:text-4xl w-full leading-tight line-clamp-2 xl:line-clamp-3">
-            <a href=<?php echo $permalink; ?>><h1><?php echo $title; ?></h1></a>
+            <a href=<?php echo $permalink; ?>><h2><?php echo $title; ?></h2></a>
         </div>
         <div class="border-l-2 pl-2 text-justify">
             <p class="text-sm line-clamp-5">

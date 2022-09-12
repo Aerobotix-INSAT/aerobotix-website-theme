@@ -37,7 +37,7 @@ $has_post_thumbnail = has_post_thumbnail($post_id);
         </div>
     </div>
     <a href=<?php echo $permalink ?> class="font-bold text-xl w-full leading-tight h-[4.2rem] mb-5 px-5 line-clamp-3">
-        <h1><?php echo $title; ?></h1>
+        <h2><?php echo $title; ?></h2>
     </a>
     <a href=<?php echo $permalink; ?> class="block w-[91%] mx-auto h-40 rounded-xl overflow-hidden mb-2 brightness-105">
         <?php if ($has_post_thumbnail) {
