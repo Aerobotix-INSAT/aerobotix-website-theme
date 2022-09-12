@@ -7,6 +7,7 @@ if ($args["post"]) {
 
 $post_id = $post->ID;
 $title = $post->post_title;
+$title=$title?$title:"Untitled Post";
 $permalink = '"'.get_permalink($post_id).'"'; 
 $thumbnail = get_the_post_thumbnail($post_id, "", [
     "class" => "object-cover w-full h-48",
@@ -16,17 +17,18 @@ $author_link = '"'.get_author_posts_url($post->post_author).'"';
 $date = get_the_date("F j, Y", $post_id);
 $date_html= get_the_date("Y-m-d", $post_id);
 $tags = get_the_tags($post_id);
+$tags =$tags?$tags:[];
 $avatar = get_avatar($post->post_author, 60, "", "", [
     "class" => "object-cover w-9 h-9",
 ]);
 $has_post_thumbnail = has_post_thumbnail($post_id);
 ?>
 
-<article class="glass h-fit w-80 rounded-3xl p-5 flex  flex-col items-center gap-5 overflow-hidden">
-    <div class="font-bold text-2xl w-full leading-tight text-ellipsis basis-[5.7rem] flex-none line-clamp-3">
+<article class="glass h-fit w-80 rounded-3xl p-5 gap-5 overflow-hidden m-6">
+    <div class="font-bold text-2xl w-full leading-tight text-ellipsis h-[5.7rem] line-clamp-3 mb-5">
         <a href=<?php echo $permalink ?> ><h1><?php echo $title; ?></h1></a>
     </div>
-    <div class="w-full flex flex-row justify-start items-center gap-1.5">
+    <div class="mb-5 w-full flex flex-row justify-start items-center gap-1.5">
         <a href=<?php echo $author_link ?> class="glass rounded-full overflow-hidden border-2 outline-glass w-9 h-9">
             <?php echo $avatar; ?>
         </a>
@@ -37,7 +39,7 @@ $has_post_thumbnail = has_post_thumbnail($post_id);
             <time class="text-xs text-[#C5C5C5]" datetime="<?php echo $date_html ?>"><?php echo $date; ?></time>
         </div>
     </div>
-    <div class="font-medium w-full text-sm leading-4 line-clamp-2 basis-[2.3rem] flex-none">
+    <div class="mb-5 font-medium w-full text-sm leading-4 line-clamp-2 h-[2.3rem]">
         <?php if ($tags) {
             echo "Tags: ";
             foreach ($tags as $tag) { ?>
@@ -49,7 +51,7 @@ $has_post_thumbnail = has_post_thumbnail($post_id);
                                                                                     strtoupper($tag->name)
                                                                                 ); ?></a>
         <?php }
-        } ?>
+        }else echo "No Tags" ?>
     </div>
     <a href=<?php echo $permalink; ?> class="block w-full h-48 rounded-xl overflow-hidden">
         <?php if ($has_post_thumbnail) {

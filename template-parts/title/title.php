@@ -37,6 +37,7 @@ if (is_author()) {
             $content = "Please check the url";
         } elseif (is_page()) {
             $title = get_the_title();
+            $title=$title?$title:"Untitled Page";
             $content= get_post_field( 'post_name', get_post() ) == "blog"? get_the_content() : "";
         } else {
             $title = "Aerobotix Blog";
@@ -44,8 +45,8 @@ if (is_author()) {
         }
     }
 ?>
-    <div id="title" class="w-full text-center flex flex-col justify-center px-6 sm:px-24 lg:px-56 pt-28 pb-6 gap-3 items-center ">
-        <h1 class="font-black text-5xl md:text-6xl break-all">
+    <div id="title" class="container px-6  pt-28 pb-6 text-center">
+        <h1 class="font-black text-5xl md:text-6xl break-all mb-3">
             <?php echo $title ?>
         </h1>
         <p class="text-normal text-sm md:text-base">

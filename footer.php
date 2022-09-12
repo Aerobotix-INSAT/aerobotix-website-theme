@@ -1,11 +1,12 @@
 <!-- here goes the footer code -->
 
 <?php $menus = ["Blog", "About", "Links"]; ?>
-<footer >
+<footer>
     <div class="w-full flex flex-col items-center justify-center gap-5 lg:flex-row lg:h-36 my-20">
-        <div class="text-center">
-            <img alt="Aerobotix Logo" class="mb-[7px]" src="<?php echo get_template_directory_uri() .
-            "/assets/images/logo-white.png"; ?>">
+        <div class="text-center w-[30rem]">
+            <?php if (function_exists('the_custom_logo')) {
+                the_custom_logo();
+            } ?>
             <?php echo make_clickable($GLOBALS['cgv']['email']) ?>
         </div>
         <div class="bg-white h-full w-[2px]"></div>
@@ -24,11 +25,11 @@
     </div>
     <div class="mix-blend-overlay flex items-center justify-center pb-16">
         <img alt="Learn, Create, Innovate" class="max-w-3xl w-full" src="<?php echo get_template_directory_uri() .
-            "/assets/images/artwork.png"; ?>">
+                                                                                "/assets/images/artwork.png"; ?>">
     </div>
 </footer>
 <?php wp_footer(); ?>
-        </div>
+</div>
 </body>
 
 </html>

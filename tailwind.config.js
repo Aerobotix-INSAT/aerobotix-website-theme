@@ -9,12 +9,15 @@ module.exports = {
     "./scripts/*.js",
   ],
   theme: {
+    container: {
+      center: true,
+    },
     fontFamily: {
       sans: ["Montserrat", "sans-serif"],
     },
     extend: {
       colors: {
-        background: 'hsl(var(--background) / <alpha-value>)',
+        background: "hsl(var(--background) / <alpha-value>)",
         primary: "#E91921",
         secondary: "#0967AA",
         glass: "#FDFAFA80",

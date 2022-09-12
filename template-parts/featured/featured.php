@@ -11,7 +11,7 @@ if ($query->have_posts()) {
 $post_id = $post->ID;
 $title = $post->post_title;
 $permalink = get_permalink($post_id);
-$thumbnail = get_the_post_thumbnail($post_id, "", ["class" => "object-cover w-full h-auto max-w-lg md:h-[clamp(15rem,17rem,100%)] md:w-[36rem]"]);
+$thumbnail = get_the_post_thumbnail($post_id, "", ["class" => "object-cover w-full h-auto max-w-lg md:h-[clamp(15rem,17rem,100%)] md:w-[clamp(20rem,100%,36rem)]"]);
 $author = get_the_author_meta("display_name", $post->post_author);
 $author_link = get_author_posts_url($post->post_author);
 $date = get_the_date("F j, Y", $post_id);
@@ -22,9 +22,8 @@ $avatar = get_avatar($post->post_author, 60, "", "", [
 $has_post_thumbnail = has_post_thumbnail($post_id);
 $excerpt = get_the_excerpt($post_id);
 ?>
-<section id="featured" class="flex flex-col md:flex-row w-full px-9 sm:px-14 h-fit py-9 mb-20 items-center gap-3 md:p-4 justify-center" style="background-image: url(<?php echo get_template_directory_uri() .
-                                                                                                                                                                    "/assets/images/featured_bg.png"; ?>); background-size: cover; ">
-    <div class="w-full h-auto max-w-lg md:h-[clamp(15rem,17rem,100%)] md:w-[35rem] shrink-0 rounded-xl overflow-hidden outline-2 outline">
+<section id="featured" class="flex flex-col md:flex-row w-full px-9 sm:px-14 h-fit py-9 mb-20 items-center gap-3 md:p-4 justify-center" style="background-image: url(<?php echo get_template_directory_uri() ."/assets/images/featured_bg.png"; ?>); background-size: cover; ">
+    <div class="w-full h-auto max-w-lg md:h-[clamp(15rem,17rem,100%)] md:w-[clamp(20rem,40%,36rem)] shrink-0 rounded-xl overflow-hidden outline-2 outline">
         <a href=<?php echo $permalink; ?> class="block w-full h-full">
             <?php if ($has_post_thumbnail) {
                 echo $thumbnail;
