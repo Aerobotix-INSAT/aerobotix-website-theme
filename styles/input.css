@@ -20,6 +20,13 @@ Versoin: 0.9.0
 html {
   color: white;
 }
+.thumbnail .thumbnail-hover {
+  @apply opacity-0;
+}
+.card:hover .thumbnail-hover{
+  @apply opacity-100;
+}
+
 @layer components {
   .glass {
     background: var(--glass) ;
@@ -178,4 +185,10 @@ html {
 }
 .comment-form{
 
+}
+.avatar > *{
+  @apply -mr-2.5
+}
+.avatars:last-child{
+  @apply mx-0
 }

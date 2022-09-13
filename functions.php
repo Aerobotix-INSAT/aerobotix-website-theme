@@ -1,5 +1,7 @@
 <?php
 
+use Sabre\VObject\Property\VCard\TimeStamp;
+
 if (!function_exists("aerobotix_theme_setup")):
     /**
      * Sets up theme defaults and registers support for various WordPress features.
@@ -47,7 +49,7 @@ if (!function_exists("aerobotix_theme_enqueue_scripts")):
             "style",
             get_stylesheet_uri(),
             [],
-            false // TODO : Change this to a version number for production
+            time()  // TODO : Change this to a version number for production
         );
 
         
@@ -86,3 +88,13 @@ function themename_custom_logo_setup() {
 }
 
 add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
+
+function get_user_id_by_display_name( $display_name ) {
+    global $wpdb;
+
+    if ( ! $user = $wpdb->get_row( $wpdb->prepare(
+        "SELECT `ID` FROM $wpdb->users WHERE `display_name` = %s", $display_name
+    ) ) )
+        return false;
+    return $user->ID;
+}
